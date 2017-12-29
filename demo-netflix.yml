@@ -1,0 +1,18 @@
+spring:
+  profiles: primary
+server:
+  port: 8081
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+---
+spring:
+  profiles: secondary
+server:
+  port: 8082
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
