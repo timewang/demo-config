@@ -9,7 +9,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://eureka-primary:1111/eureka/,http://eureka-secondary:1112/eureka/
+      defaultZone: http://eureka-tertiary:1113/eureka/,http://eureka-secondary:1112/eureka/
 
 ---
 spring:
@@ -19,6 +19,20 @@ server:
 eureka:
   instance:
       hostname: eureka-secondary
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://eureka-primary:1111/eureka/,http://eureka-tertiary:1113/eureka/
+
+---
+spring:
+  profiles: tertiary
+server:
+  port: 1113
+eureka:
+  instance:
+      hostname: eureka-tertiary
   client:
     register-with-eureka: true
     fetch-registry: true
