@@ -8,8 +8,7 @@ eureka:
   client:
     register-with-eureka:true
     fetch-registry:true
-    serviceUrl:
-      defaultZone:http://localhost:${server:port}/eureka/
+    serviceUrl:defaultZone:http://localhost:${server:port}/eureka/
 
 ---
 
@@ -23,5 +22,4 @@ eureka:
   client:
     register-with-eureka:true
     fetch-registry:true
-    serviceUrl:
-      defaultZone:http://localhost:${server:port}/eureka/
+    serviceUrl:defaultZone:http://localhost:${server:port}/eureka/
