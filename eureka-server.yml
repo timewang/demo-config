@@ -3,11 +3,13 @@ spring:
 server:
   port: 1111
 eureka:
+  instance:
+      hostname: eureka-primary
   client:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/
+      defaultZone: http://eureka-primary:1111/eureka/,http://eureka-secondary:1112/eureka/
 
 ---
 spring:
@@ -15,8 +17,10 @@ spring:
 server:
   port: 1112
 eureka:
+  instance:
+      hostname: eureka-secondary
   client:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/
+      defaultZone: http://eureka-primary:1111/eureka/,http://eureka-secondary:1112/eureka/
