@@ -6,7 +6,8 @@ eureka:
   client:
     register-with-eureka:true
     fetch-registry:true
-    serviceUrl:defaultZone:http://localhost:1111/eureka/,http://localhost:1112/eureka/
+    serviceUrl:
+      defaultZone:http://localhost:1111/eureka/,http://localhost:1112/eureka/
 
 ---
 spring:
@@ -17,4 +18,5 @@ eureka:
   client:
     register-with-eureka:true
     fetch-registry:true
-    serviceUrl:defaultZone:http://localhost:1111/eureka/,http://localhost:1112/eureka/
+    serviceUrl:
+      defaultZone:http://localhost:1111/eureka/,http://localhost:1112/eureka/
