@@ -1,22 +1,22 @@
 spring:
-  profiles:primary
+  profiles: primary
 server:
-  port:1111
+  port: 1111
 eureka:
   client:
-    register-with-eureka:true
-    fetch-registry:true
+    register-with-eureka: true
+    fetch-registry: true
     serviceUrl:
-      defaultZone:http://localhost:1111/eureka/,http://localhost:1112/eureka/
+      defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/
 
 ---
 spring:
-  profiles:secondary
+  profiles: secondary
 server:
-  port:1112
+  port: 1112
 eureka:
   client:
-    register-with-eureka:true
-    fetch-registry:true
+    register-with-eureka: true
+    fetch-registry: true
     serviceUrl:
-      defaultZone:http://localhost:1111/eureka/,http://localhost:1112/eureka/
+      defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/
