@@ -15,4 +15,5 @@ eureka:
 
 logging:
   level:
+    root: DEBUG
     org.springframework.web.servlet.DispatcherServlet: DEBUG
